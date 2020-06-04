@@ -7,9 +7,9 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: "yes"
-      MYSQL_DATABASE: fortify
-      MYSQL_USER: fortify
-      MYSQL_PASSWORD: fortify
+      MYSQL_DATABASE: "fortify"
+      MYSQL_USER: "fortify"
+      MYSQL_PASSWORD: "fortify"
     volumes:
       - dbVolume:/var/lib/mysql
       - ./sql/mysql/create-tables.sql:/docker-entrypoint-initdb.d/create-tables.sql
